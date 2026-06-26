@@ -51,19 +51,19 @@ async function register(request, response){
 
 async function login(request, response){
     if (!request.body.username || !request.body.password){
-        response.status(400).send("Informe usuário e senha!")
+        return response.status(400).send("Informe usuário e senha!")
     }
 
     const user = await Usuario.findOne({ where: { username: request.body.username }})
     if (!user){
-        response.status(400).send("Usuário não cadastrado!")
+        return response.status(400).send("Usuário não cadastrado!")
     }
 
     if (!bcrypt.compareSync(request.body.password, user.senha_hash)){
-        response.status(401).send("Usuário ou senha inválidos!")
+        return response.status(401).send("Usuário ou senha inválidos!")
     }
     const meuToken = getToken(user.id, user.admin)
-    response.status(200).json({
+    return response.status(200).json({
         id: user.id,
         token: meuToken
     })
@@ -101,6 +101,7 @@ async function validadeAdmin(request, response, next){
                 return next()
             }
             else{
+                console.log(decodedToken)
                 return response.status(403).json({ message: "Forbidden" })
             }
         } else {

@@ -1,0 +1,404 @@
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Almendra', sans-serif;
+}
+
+body {
+  background: #1a1a1c;
+  color: #e1e1e6;
+}
+
+nav {
+  background-color: #121214;
+  border-bottom: 2px solid #29292e;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav ul li a {
+  color: #e1e1e6;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #c69749;
+  text-shadow: 0 0 8px rgba(198, 151, 73, 0.4);
+}
+
+
+#carrossel {
+  position: relative;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide.ativo {
+  display: block;
+}
+
+#carrosel .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+#carrosel .btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.anterior {
+  left: 10px;
+}
+
+.proximo {
+  right: 10px;
+}
+
+#itens {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+
+#itens h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #9ccfd8;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(156, 207, 216, 0.5);
+}
+
+.card-pocao {
+  background: linear-gradient(145deg, #1f1d2e, #171523);
+  border: 1px solid #403d52;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-pocao h2:nth-of-type(2)::after {
+  content: " moedas";
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+
+.card-pocao p {
+  color: #e0def4;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+
+.card-pocao img {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+}
+
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121214; 
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-login {
+  background-color: #202024;
+  border: 1px solid #29292e;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.form-login h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.form-login p {
+  color: #a8a8b3;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.campo-grupo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.campo-grupo label {
+  display: block;
+  color: #e1e1e6;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.campo-grupo input {
+  width: 100%;
+  padding: 12px;
+  background-color: #121214;
+  border: 1px solid #29292e;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+
+.campo-grupo input:focus {
+  outline: none;
+  border-color: #c69749; 
+}
+
+
+.btn-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #e1e1e6;
+  border: 1px solid #c69749;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #c69749;
+  color: #121214;
+  box-shadow: 0 0 10px rgba(198, 151, 73, 0.4);
+}
+
+.link-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  color: #a8a8b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.link-voltar:hover {
+  color: #c69749;
+}
+
+
+.card-pocao .btn {
+  background-color: transparent;
+  color: #e1e1e6;
+  border: 1px solid #c69749; 
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%; 
+  transition: all 0.2s ease;
+}
+
+.card-pocao .btn:hover {
+  background-color: #c69749;
+  color: #171523; 
+  box-shadow: 0 0 10px rgba(198, 151, 73, 0.4);
+}
+
+.card-pocao .btn-rm {
+  background-color: transparent;
+  color: #e1e1e6;
+  border: 1px solid #d40b26; 
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%; 
+  transition: all 0.2s ease;
+}
+
+.card-pocao .btn-rm:hover {
+  background-color: #d40b26; 
+  box-shadow: 0 0 10px rgba(198, 151, 73, 0.4);
+}
+
+/* Container que centraliza e limita a largura do formulário */
+.container-cadastro {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* O Card do Formulário */
+.form-cadastro {
+  background-color: #202024; /* Mesmo cinza sóbrio dos cards */
+  border: 1px solid #29292e;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-cadastro h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.form-cadastro p {
+  color: #a8a8b3;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* Estrutura de inputs em linha (Preço e Foto lado a lado) */
+.campo-grupo-linha {
+  display: flex;
+  gap: 20px;
+}
+
+.campo-grupo-linha .campo-grupo {
+  flex: 1; /* Faz ambos dividirem o espaço igualmente */
+}
+
+/* Configurações padrão dos campos */
+.campo-grupo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.campo-grupo label {
+  display: block;
+  color: #e1e1e6;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Estilo para Inputs e Textarea */
+.campo-grupo input,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #121214; /* Fundo mais escuro interno */
+  border: 1px solid #29292e;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+/* Textarea específico para a descrição ter mais espaço físico */
+.campo-grupo textarea {
+  height: 100px;
+  resize: vertical; /* Permite redimensionar apenas para baixo */
+}
+
+/* Efeito de foco em dourado */
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  border-color: #c69749; 
+}
+
+/* Botão de Enviar Cadastro */
+.btn-enviar-cadastro {
+  width: 100%;
+  padding: 14px;
+  background-color: transparent;
+  color: #e1e1e6;
+  border: 1px solid #c69749; /* Borda dourada padrão */
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-enviar-cadastro:hover {
+  background-color: #c69749;
+  color: #121214; /* Inverte o texto para a cor escura */
+  box-shadow: 0 0 10px rgba(198, 151, 73, 0.4);
+}
+
+/* Responsividade simples para telas pequenas */
+@media (max-width: 480px) {
+  .campo-grupo-linha {
+    flex-direction: column;
+    gap: 0;
+  }
+}

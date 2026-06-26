@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Poções e Soluções</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#itens">Produtos</a></li>
+            <li><a href="login.html">Admin</a></li>
+        </ul>
+    </nav>
+    <div id="historia">
+        <h1>História</h1>
+        <p>Somos a <strong>Poções e Soluções</strong>, a maior loja de poções e magias de todo os mundos fictícios. Nós existimos desde de 1867, sendo mantida pela família Merigold com muito amor. Após a pandemia da COVID-19, as lojas da região do Beco da Última Saída sofreram muito com a quantidade reduzida de pessoas, magos e feiticeiros andando pelas ruas. Agora possuímos a loja em sua versão online, dando a mesma atenção que fisicamente!</p>
+        <h1>Fotos da loja</h1>
+        <div id="carrossel">
+            <div id="carrossel-slides">
+                <img class="slide ativo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c5ab3cd-cc49-4cdd-9ebf-327f804f5674/dfz3vcr-90b93b5a-28e1-4cff-b3a5-06f534f4c16c.png/v1/fill/w_800,h_774,q_80,strp/cozy_potion_shop_by_digitalrevvi_dfz3vcr-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzc0IiwicGF0aCI6Ii9mLzZjNWFiM2NkLWNjNDktNGNkZC05ZWJmLTMyN2Y4MDRmNTY3NC9kZnozdmNyLTkwYjkzYjVhLTI4ZTEtNGNmZi1iM2E1LTA2ZjUzNGY0YzE2Yy5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.2_wG_oib7D68bCalzAIbRlCAFgz2Aq4rVK4ueEzcZtE">
+                <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-hedOLI8Abho-v2gjyGerJHiSSu0xkdu0Hy6zISuB7cbm2GPhwK3GWZWd&s=10">
+                <img class="slide" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c5ab3cd-cc49-4cdd-9ebf-327f804f5674/dfz0e73-3c91dc1b-6f04-48cb-a0c6-00c8035f1438.png/v1/fill/w_1024,h_512,q_80,strp/little_potion_shop_by_digitalrevvi_dfz0e73-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6Ii9mLzZjNWFiM2NkLWNjNDktNGNkZC05ZWJmLTMyN2Y4MDRmNTY3NC9kZnowZTczLTNjOTFkYzFiLTZmMDQtNDhjYi1hMGM2LTAwYzgwMzVmMTQzOC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.IP0WJ_VzpNIhd0ti9dwHfShQmB7Ig1J5BEv2vfdxPg0">
+            </div>
+            <button class="btn anterior" onclick="mudarFoto(-1)">Anterior</button>
+            <button class="btn proximo" onclick="mudarFoto(1)">Próximo</button>
+        </div>
+    </div>
+
+    <div id="itens">
+        <h1>Itens da loja</h1>
+    </div>
+    
+    <script src="./js/index.js"></script>
+</body>
+</html>
